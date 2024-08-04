@@ -1,0 +1,413 @@
+/* General Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #070818;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(18, 20, 28, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 10px;
+    background: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    filter: brightness(50%);
+}
+
+/* About Section */
+.about {
+    padding: 80px 50px;
+    background: #1a1a1a;
+}
+
+.about h2 {
+    text-align: center;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.accordion-item h3 {
+    background: #1c1c1c;
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-item h3::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.accordion-item.open h3::after {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #1c1c1c;
+    padding: 15px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 50px;
+    background: #12141c;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.service-card:hover {
+    background: #333;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 80px 50px;
+    background: #1a1a1a;
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-filters button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.portfolio-filters button:hover {
+    background: #e65c50;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-info {
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 50px;
+    background: #12141c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #ff6f61;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #e65c50;
+}
+
+#map {
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #12141c;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-newsletter {
+    margin-bottom: 20px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.footer-newsletter button {
+    background: #ff6f61;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-links a {
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social .social-icon {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: rgba(18, 20, 28, 0.9);
+}
+
+body.dark-mode .hero {
+    background: #121212;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #12141c;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .search-form {
+        display: none;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        flex: 1;
+        max-width: 100%;
+    }
+}
